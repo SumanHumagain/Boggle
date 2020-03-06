@@ -1,12 +1,15 @@
-import React from 'react'
+import React from 'react';
+import {BrowserRouter, Switch, Route } from 'react-router-dom';
+import PageLoad from './PageLoad';
+
 class App extends React.Component {
-    constructor(props) {
-        super(props);
-         this.state = {name: 'fsdf'};
-      }
   render () {
     return (
-    <div>Let's Start game! {this.state.name}</div>
+            <BrowserRouter>
+                <Switch>
+                    <Route exact path='/' component={PageLoad} />
+                </Switch>
+            </BrowserRouter>
     ) 
   } 
 }  
