@@ -22,7 +22,6 @@ export const gameService = {
   
       })
        
-  
   }
   function evaluateWord(data) {
 debugger;

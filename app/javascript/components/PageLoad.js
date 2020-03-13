@@ -46,7 +46,7 @@ class PageLoad extends React.Component {
               <div className="mt-2">
               <h2>Are you ready?</h2>
               </div>
-              <div className="mt-4">
+              <div className="mt-5">
                 <button type="button" onClick={this.startGame} className="btn btn-success">Lets Start The Game</button>
             </div>
       </div>

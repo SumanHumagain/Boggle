@@ -29,10 +29,6 @@ class Game extends Component {
     };
   }
 
-  // componentDidMount() {debugger
-  //   window.addEventListener("popstate", this.gotoHome);
-  // }
-
   goBack(e){
     debugger;
 
