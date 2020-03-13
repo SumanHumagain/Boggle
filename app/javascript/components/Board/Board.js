@@ -12,7 +12,7 @@ const Board = props => {debugger;
 
   return (
      
-    <div className="board-container">
+    <div className="col board-container">
     <div className="board">
       {letterStyle}
     </div>

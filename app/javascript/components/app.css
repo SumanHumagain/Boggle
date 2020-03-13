@@ -1,8 +1,13 @@
-/* .page-Load {
-  margin: 0 auto;
-  justify-content: center;
-  } */
 .App {
   margin: 0 auto;
   justify-content: center;
 }
+
+.page-load{
+  margin-top: 1vw;
+}
+
+img {
+  width: 40vw;
+  height: 20vw;
+ }

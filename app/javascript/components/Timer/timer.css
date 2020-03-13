@@ -1,0 +1,19 @@
+.stopwatch {
+    text-transform: capitalize;
+    float: right;
+    font-size: x-large;
+    font-weight: 500;
+  }
+  
+  .timer-green {
+    color: green;
+  }
+  .timer-red {
+    color: red;
+    font-weight: 600;
+  }
+  .timer-yellow {
+    color: yellowgreen;
+    font-weight: bold;
+  }
+  

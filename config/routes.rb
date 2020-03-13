@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   namespace :v1, defaults: { format: "json" } do
-    get "game", to: "games#index"
+    get "game", to: "game#index"
+    get "game/evaluate", to: "game#evaluateInput"
   end
 
    # Formward root to HomeController#index

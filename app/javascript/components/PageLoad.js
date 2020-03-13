@@ -1,6 +1,8 @@
 import React from "react"
 import { gameAction } from "../../javascript/actions/game.action";
 import { connect } from "react-redux";
+import LogoImg from '../../assets/images/logo_boggle.png';
+
 class PageLoad extends React.Component {
 
 
@@ -10,14 +12,15 @@ class PageLoad extends React.Component {
     // this.state = {
     //   boardSize: 4
     // };
- 
+    
+    this.props.history.push('/');
     this.startGame = this.startGame.bind(this);
   }
 
   startGame(event) {  debugger;
     event.preventDefault();
-
-    this.setState({ submitted: true });
+    
+    //this.setState({ submitted: true });
 
     // const { userName, stageID, boardSize } = this.state;
     const { dispatch } = this.props;
@@ -37,13 +40,15 @@ class PageLoad extends React.Component {
     return (
       <React.Fragment>
       <div className="page-load">
-              <p>
-                Welcome to boggle game!
-              </p>
-              
+             <div className="mt-2">
+               <img src={LogoImg} alt="logo"/>
+              </div>
+              <div className="mt-2">
               <h2>Are you ready?</h2>
-              {/* <input type="Button"  value="Lets start the game" /> */}
-              <button type="button" onClick={this.startGame} className="btn  btn-success">Start New Game</button>
+              </div>
+              <div className="mt-4">
+                <button type="button" onClick={this.startGame} className="btn btn-success">Lets Start The Game</button>
+            </div>
       </div>
       </React.Fragment>
     );

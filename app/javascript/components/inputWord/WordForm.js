@@ -9,8 +9,9 @@ export default class WordForm extends React.Component {
       handleSubmit = (event) => {
         debugger;
         event.preventDefault();
-        this.props.handleWord(this.state.input)
-        this.setState({input: ''})
+        this.props.handleWord(this.state.input);
+        
+        this.setState({input: '', errorMessage:''});
       }
 
       handleChange = (event) => {
@@ -21,7 +22,7 @@ export default class WordForm extends React.Component {
               errorMessage: ""
             })
           } else {
-            this.setState({
+            this.setState({input: '',
               errorMessage: "That is not a valid letter!"
             })
           }
@@ -89,12 +90,20 @@ export default class WordForm extends React.Component {
 
     render = () => {
         return(
-        <div className="input-form container">
-            <form onSubmit={this.handleSubmit} >
-            <input id="poop" type='text' onChange={this.handleChange} value={this.state.input} />
-            <button type='submit' className="btn btn-sm" >Enter</button>
-            </form>
-            {this.state.errorMessage ? <p className="alert alert-danger error-message">{this.state.errorMessage}</p> : "" }
+        <div className="mt-4 inputFormDgn input-form container">
+          <form onSubmit={this.handleSubmit} >
+            <div className="inputFieldDgn row">
+            <div className="col-4">
+              <input type='text' onChange={this.handleChange} value={this.state.input} />
+              {this.state.errorMessage ? <p className="alert alert-danger error-message">{this.state.errorMessage}</p> : "" }
+            </div>
+            <div className="col-1">
+              <button type='submit' className="ml-2 btn btn-info" >Enter</button>
+            </div>
+          </div>
+
+</form>
+            
         </div>
         )
     }

@@ -35,7 +35,8 @@
   .word-list-container {
     grid-column: 10 / 13;
     grid-row: 1 / 3;
-    width: 328px;
+    min-width: 278px;
+    width: 11vw;
   }
   
   .word-list-grid {
@@ -72,3 +73,25 @@
   .totalScore{
     color:rgb(14, 115, 173)
   }
+
+  .restartBtn{
+    height: 50px !important;
+  }
+
+  .card{
+    margin: 3vw !important;
+  }
+
+  .inputFormDgn{
+    margin: -10vw 0 0 13vw !important;
+  }
+
+.inputFieldDgn{
+  margin-left: 11vw !important;
+  margin-bottom: 100px !important;
+  }
+
+.alert{
+width: 213px;
+    margin-left: 36px;
+}

@@ -2,7 +2,8 @@ import React from 'react'
 
 const WordList = props=> {
   
-    const { wordsAll } = props;
+    const { wordsAll, trials, wrongCount } = props;
+    
      let words = [];
      let scores = [];
      // if(wordsAll !=null || wordsAll != undefined)
@@ -32,7 +33,7 @@ const WordList = props=> {
     <div className="word-list-container">
       <div className="word-list-grid" >
 
-      <div className="row  ">
+      <div className="row">
           <div className="ml-4">
               <h4 >Your Words</h4>
               <div >
@@ -50,9 +51,16 @@ const WordList = props=> {
           
           </div>
       </div>
-      {{totalScore} >0 ?  
+      { totalScore >0 ?    
+      <h2 className="totalScore">
+        Total Score: <span>{totalScore}</span><br/>
+        Total trails: <span>{trials}</span><br/>
+        Wrong Try: <span>{wrongCount}</span><br/>
+        </h2>
+        : null  }
+       {/* { totalScore >0 ?    
       <h2 className="totalScore">Total Score: <span>{totalScore}</span></h2>
-      : null}
+        : null  } */}
     </div>
   )
 }
