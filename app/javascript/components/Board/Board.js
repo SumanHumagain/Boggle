@@ -16,6 +16,7 @@ const Board = props => {debugger;
     <div className="board">
       {letterStyle}
     </div>
+    
   </div>
     
   )
