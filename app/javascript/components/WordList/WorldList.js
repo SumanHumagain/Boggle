@@ -35,7 +35,7 @@ const WordList = props=> {
 
       <div className="row">
           <div className="ml-4">
-              <h4 >Your Words</h4>
+              <h4 >Your Words:</h4>
               <div >
                 <ul>{showWord()}</ul>
               </div>
